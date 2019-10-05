@@ -1,5 +1,5 @@
 defmodule ActorCommons do
-  def via_tuple(node_id), do: {:via, Registry, {:registry, node_id}}
+  def via_tuple(node_id), do: IO.inspect {:via, Registry, {:registry, node_id}}
 
   def getPid(node_id) do
     case Registry.lookup(:registry, node_id) do
